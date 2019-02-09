@@ -8,7 +8,7 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  local_dir: dist/
+  local_dir: app/dist/
   repo: https://$DT_DEPLOY_USERNAME:$DT_DEPLOY_PASSWORD@DbugTech/dbugtech.github.io?cname=dbugtech.com
   github-token: $MAROOF_PERSONAL_ACCESS_TOKEN
   keep-history: true
