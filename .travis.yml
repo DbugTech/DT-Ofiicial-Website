@@ -10,7 +10,7 @@ deploy:
   target-branch: master
   skip-cleanup: true
   local_dir: app/dist/
-  repo: $DT_DEPLOY_USERNAME:$DT_DEPLOY_PASSWORD@DbugTech/dbugtech.github.io
+  repo: DbugTech/dbugtech.github.io
   github-token: $MAROOF_PERSONAL_ACCESS_TOKEN
   keep-history: true
   on:
