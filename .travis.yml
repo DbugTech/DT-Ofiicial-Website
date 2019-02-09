@@ -1,8 +1,8 @@
 language: node_js
-before_install:
-  - npm i -g npm@6.4.1
-install: npm install
-before_script: npm install -g gulp-cli
+node_js: "8"
+before_script:
+  - npm install -g gulp-cli
+  - npm install
 script:
   - gulp production-min
 deploy:
@@ -10,7 +10,7 @@ deploy:
   skip-cleanup: true
   local_dir: dist/
   repo: https://$DT_DEPLOY_USERNAME:$DT_DEPLOY_PASSWORD@DbugTech/dbugtech.github.io?cname=dbugtech.com
-  github-token: $MAROOF_PERSONAL_ACCESS_TOKEN # a token generated on github allowing travis to push code on you repository
+  github-token: $MAROOF_PERSONAL_ACCESS_TOKEN
   keep-history: true
   on:
     branch: master

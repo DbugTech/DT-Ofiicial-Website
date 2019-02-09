@@ -29,3 +29,6 @@ node_modules
 
 # tmp preview directory
 app/tmp
+
+# unused site files
+# app/lib
