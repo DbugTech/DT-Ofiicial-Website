@@ -7,9 +7,10 @@ script:
   - gulp production-min
 deploy:
   provider: pages
+  target-branch: master
   skip-cleanup: true
   local_dir: app/dist/
-  repo: https://$DT_DEPLOY_USERNAME:$DT_DEPLOY_PASSWORD@DbugTech/dbugtech.github.io
+  repo: $DT_DEPLOY_USERNAME:$DT_DEPLOY_PASSWORD@DbugTech/dbugtech.github.io
   github-token: $MAROOF_PERSONAL_ACCESS_TOKEN
   keep-history: true
   on:
