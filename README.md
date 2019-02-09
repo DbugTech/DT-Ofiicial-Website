@@ -1,8 +1,9 @@
-#Dbug Tech Official website - (source)
+# Dbug Tech Official website - (source)
 
+![https://www.travis-ci.org/DbugTech/DT-Ofiicial-Website.svg?branch=master](https://www.travis-ci.org/DbugTech/DT-Ofiicial-Website.svg?branch=master)
 generated site code hosted at [https://github.com/DbugTech/dbugtech.github.io](https://github.com/DbugTech/dbugtech.github.io)
 
-#Contrinution guide
+# Contrinution guide
 in order to update the site you need to send a (PR) of the version of the site you want
 
 ## how to edit the site on your local machine
