@@ -36,6 +36,7 @@ var paths = {
     srcHTML: 'app/src/*.html',
     srcCSS: 'app/src/assets/scss/',
     srcJS: 'app/src/assets/js/',
+    srcCNAME: 'app/src/CNAME',
     srcPhp: 'app/src/assets/php/**/*',
     srcImages: 'app/src/assets/img/**/*',
     srcVideos: 'app/src/assets/videos/**/*',
@@ -56,6 +57,7 @@ var paths = {
     distIndex: 'app/dist/index.html',
     distCSS: 'app/dist/assets/css/',
     distJS: 'app/dist/assets/js/',
+    distCNAME: 'app/dist/CNAME',
     distPhp: 'app/dist/assets/php',
     distImages: 'app/dist/assets/img',
     distVideos: 'app/dist/assets/videos',
@@ -134,6 +136,10 @@ gulp.task('videos', function () {
     return gulp.src(paths.srcVideos)
         .pipe(gulp.dest(paths.tmpVideos));
 });
+gulp.task('CNAME', function () {
+    return gulp.src(paths.srcCNAME)
+        .pipe(gulp.dest(paths.distCNAME));
+});
 
 gulp.task('clean:tmp', function () {
     return del(bases.tmp + '**', {force: true});
@@ -150,6 +156,7 @@ gulp.task('default', gulp.series(
     'views',
     'images',
     'fonts',
+    'CNAME',
     'php',
     'videos'
 ));
@@ -348,6 +355,7 @@ gulp.task('production', gulp.series(
     'css:dist',
     'js:dist',
     'fonts:dist',
+    'CNAME',
     'php:dist',
     'images:dist',
     'videos:dist'
@@ -360,6 +368,7 @@ gulp.task('production-min', gulp.series(
     'js:dist-min',
     'fonts:dist',
     'php:dist',
+    'CNAME',
     'images:dist',
     'videos:dist'
 ));
