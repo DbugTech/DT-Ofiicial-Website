@@ -57,7 +57,7 @@ var paths = {
     distIndex: 'app/dist/index.html',
     distCSS: 'app/dist/assets/css/',
     distJS: 'app/dist/assets/js/',
-    distCNAME: 'app/dist/CNAME',
+    distCNAME: 'app/dist/',
     distPhp: 'app/dist/assets/php',
     distImages: 'app/dist/assets/img',
     distVideos: 'app/dist/assets/videos',
@@ -137,8 +137,8 @@ gulp.task('videos', function () {
         .pipe(gulp.dest(paths.tmpVideos));
 });
 gulp.task('CNAME', function () {
-    return gulp.src(paths.srcCNAME)
-        .pipe(gulp.dest(paths.distCNAME));
+    return gulp.src([paths.srcCNAME])
+        .pipe(gulp.dest(bases.dist));
 });
 
 gulp.task('clean:tmp', function () {
